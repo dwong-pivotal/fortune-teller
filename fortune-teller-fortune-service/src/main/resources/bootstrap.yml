@@ -4,3 +4,14 @@ spring:
   cloud:
     config:
       uri: ${vcap.services.config-service.credentials.uri:http://localhost:8888}
+      
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    nonSecurePort: 80
+
+info:
+  app:
+    name: fortune-service
+    description: fortune service
+    version: 0.0.1
